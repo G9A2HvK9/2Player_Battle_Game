@@ -1,10 +1,11 @@
-require "rubygems"
-require "sinatra"
-require "shotgun"
+#require "rubygems"
+require "sinatra/base"
+#require "shotgun"
 
+class Battle < Sinatra::Base
+  get "/" do
+    "Testing infrastructure working!"
+  end
 
-get "/" do
-
-  "Hello Battle!"
-
+  run! if app_file == $0
 end
