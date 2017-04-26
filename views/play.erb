@@ -1,7 +1,9 @@
 <html>
   <div>
-    Player 1 is <%= @player1 %><br>
-    Player 2 is <%= @player2 %><br>
-    Let the battle commence!!!
+    <%= @player1 %> gets <%= @hp_player1 %> HP<br>
+    <%= @player2 %> gets <%= @hp_player2 %> HP<br><br>
+    <form action="/fight" method="get">
+      <input type="submit" value="FIGHT!">
+    </form>
   </div>
 </html>
