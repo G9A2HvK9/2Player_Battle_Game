@@ -1,5 +1,4 @@
 require 'spec_helper'
-require_relative './web_helpers'
 require './app'
 
 feature 'Testing infrastructure' do
