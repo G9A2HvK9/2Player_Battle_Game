@@ -1,4 +1,5 @@
 require 'spec_helper'
+require_relative './web_helpers'
 require './app'
 
 feature 'Testing infrastructure' do
@@ -10,10 +11,7 @@ end
 
 feature 'Entering player names and displaying them' do
   scenario "Expects player names to be displayed with a commencement message" do
-    visit('/')
-    fill_in 'player1', :with => 'Widgyoto'
-    fill_in 'player2', :with => 'Gordon'
-    click_button 'Create Players'
+    sign_in_and_play
     expect(page).to have_text('Widgyoto gets ')
     expect(page).to have_text('Gordon gets')
     expect(page).to have_button('FIGHT!')
