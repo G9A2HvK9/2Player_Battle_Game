@@ -19,17 +19,5 @@ feature 'Entering player names and displaying them' do
     expect(page).to have_button('FIGHT!')
   end
 
-feature 'Hitting the FIGHT!' do
-  scenario 'It takes you to a new page' do
-    visit('/')
-    fill_in 'player1', :with => 'Widgyoto'
-    fill_in 'player2', :with => 'Gordon'
-    click_button 'Create Players'
-    click_button 'FIGHT!'
-    save_and_open_page
-    expect(page).to
-  end
-end
-
 
   end
