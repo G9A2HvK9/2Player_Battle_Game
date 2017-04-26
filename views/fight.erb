@@ -1,19 +1,46 @@
-<img src="https://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-48.gif?w=768&h=384"
-style='position:fixed;top:0px;left;0px;width:100%;height100%;z-index:-1;'>
+<img src="https://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-48.gif?w=768&h=384" style='position:fixed;top:0px;left;0px;width:100%;height100%;z-index:-1;'>
+
+<audio controls autoplay>
+ <source src="http://66.90.93.122/ost/street-fighter-2-turbo/tqwbodpekf/27.-cammy-stage.mp3" type="audio/mpeg">
+ Your browser does not support the audio element.
+</audio>
+
+
 <html>
+<head>
+<style>
+  h1{
+    color:red;
+    font-family: "Feast of Flesh BB";
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 300%;
+  }
 
-<div><p style="text-align:left;">
-  <font color="red"<h2>Player 1</h2>
-    <%= @player1 %><br>
-    <%= @hp_player1 %> HP
-  </font>
-  <span style="float:right;">
+  h2{
+    color:red;
+    font-family: "Monsters Attack!";
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 150%
+  }
 
-    <font color="red"<h2>Player 2</h2>
-    <%= @player2 %><br>
-    <%= @hp_player2 %> HP
-  </font>
-</span></p>
+  p{
+    color: black;
+    font-family: "Monsters Attack!";
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    font-size: 100%
+  }
+</style>
+</head>
+
+
+<div style="position:fixed;top:30px;left:30px">
+    <h1>Player 1</h1>
+    <p><%= @player1 %> - <%= @hp_player1 %> HP</p>
+</div>
+
+<div style="position:fixed;top:30px;right:30px">
+    <h1>Player 2</h1>
+    <p><%= @player2 %> - <%= @hp_player2 %> HP</p>
 </div>
 
   <div>
