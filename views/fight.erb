@@ -35,18 +35,22 @@
 
 <div style="position:fixed;top:30px;left:30px">
     <h1>Player 1</h1>
-    <p><%= @player1 %> - <%= @hp_player1 %> HP</p>
+    <p><%= $player1.player_name %> - <%= $player1.player_hp %> HP</p>
 </div>
 
 <div style="position:fixed;top:30px;right:30px">
     <h1>Player 2</h1>
-    <p><%= @player2 %> - <%= @hp_player2 %> HP</p>
+    <p><%= $player2.player_name %> - <%= $player2.player_hp %> HP</p>
 </div>
 
   <div>
     <iframe src="//giphy.com/embed/Jmv56riXdGoHm" style='position:fixed;bottom:65px;left:30px' width="239.49895615866387" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></a>
     <iframe src="//giphy.com/embed/xUPGcFU8QyGj1GLt3a" style='position:fixed;bottom:65px;right:30px' width="248.74493927125508" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></a>
   </div>
+
+  <form action="/attack">
+    <input type="submit" value="Attack!" style="position:fixed;bottom:50px;left:667px;width:100px">
+  </form>
 
 
 </html>

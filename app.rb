@@ -1,4 +1,6 @@
 require "sinatra/base"
+require "./lib/player.rb"
+require "./lib/attack.rb"
 
 class Battle < Sinatra::Base
   set :session_secret, "This should make sessions work in shotgun"
@@ -10,27 +12,22 @@ class Battle < Sinatra::Base
   end
 
   post "/names" do
-    session[:player1] = params[:player1]
-    session[:player2] = params[:player2]
-    session[:hp_player1] = rand(21)+80
-    session[:hp_player2] = rand(21)+80
+    $player1 = Player.new(params[:player1])
+    $player2 = Player.new(params[:player2])
     redirect to('/play')
   end
 
   get "/play" do
-    @player1 = session[:player1]
-    @hp_player1 = session[:hp_player1]
-    @player2 = session[:player2]
-    @hp_player2 = session[:hp_player2]
     erb(:play)
   end
 
   get "/fight" do
-    @player1 = session[:player1]
-    @hp_player1 = session[:hp_player1]
-    @player2 = session[:player2]
-    @hp_player2 = session[:hp_player2]
     erb(:fight)
+  end
+
+  get "/attack" do
+    Attack.new.punch($player2)
+    erb(:attack)
   end
 
   run! if app_file == $0
