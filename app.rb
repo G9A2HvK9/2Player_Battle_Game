@@ -26,7 +26,7 @@ class Battle < Sinatra::Base
   end
 
   get "/attack" do
-    Attack.new.punch($player2)
+    Attack.new.attack_player1
     erb(:attack)
   end
 
