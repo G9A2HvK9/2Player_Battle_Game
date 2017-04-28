@@ -1,6 +1,7 @@
 require "sinatra/base"
 require "./lib/player.rb"
 require "./lib/attack.rb"
+require "./lib/game.rb"
 
 class Battle < Sinatra::Base
   set :session_secret, "This should make sessions work in shotgun"
@@ -12,6 +13,7 @@ class Battle < Sinatra::Base
   end
 
   post "/names" do
+    $game = Game.new
     $player1 = Player.new(params[:player1])
     $player2 = Player.new(params[:player2])
     redirect to('/play')
@@ -26,7 +28,7 @@ class Battle < Sinatra::Base
   end
 
   get "/attack" do
-    Attack.new.attack_player1
+    $game.cycle
     erb(:attack)
   end
 

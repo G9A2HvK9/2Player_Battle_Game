@@ -11,10 +11,7 @@ end
 
 feature "Player 2 can attack Player 1" do
   scenario "when I click the 'attack' button, it reduces HP from player 1 by 10" do
-    $player1 = Player.new("Fighter",100)
-    $player2 = Player.new("Fighter2",100)
-    visit('/fight')
-    click_button("Attack!")
+    attack_player1
     expect($player1.player_hp).to eq(90)
   end
 end

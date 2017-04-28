@@ -1,5 +1,9 @@
 <html>
+<% if $game.turn.odd? %>
 <%= $player1.player_name %> attacked <%= $player2.player_name %>
+<% elsif $game.turn.even? %>
+<%= $player2.player_name %> attacked <%= $player1.player_name %>
+<% end %>
 <form action="/play" method="get">
   <input type="submit" value="Next Turn">
 </form>
