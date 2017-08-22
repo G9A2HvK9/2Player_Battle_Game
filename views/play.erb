@@ -1,7 +1,7 @@
 <html>
   <div>
-    <%= $player1.player_name %> gets <%= $player1.player_hp %> HP<br>
-    <%= $player2.player_name %> gets <%= $player2.player_hp %> HP<br><br>
+    <%= @game.player1.player_name %> gets <%= @game.player1.player_hp %> HP<br>
+    <%= @game.player2.player_name %> gets <%= @game.player2.player_hp %> HP<br><br>
     <form action="/fight" method="get">
       <input type="submit" value="FIGHT!">
     </form>

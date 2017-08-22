@@ -4,19 +4,19 @@ require "./lib/attack.rb"
 require "./lib/game.rb"
 
 class Battle < Sinatra::Base
-  set :session_secret, "This should make sessions work in shotgun"
-  enable :sessions
+  attr_reader :game
+
+  before do
+    @game = Game.instance
+  end
 
   get "/" do
-    erb(:index)
-    # "player1 =" << session[:player1].inspect
+    erb(:home)
   end
 
   post "/names" do
-    $game = Game.new
-    $player1 = Player.new(params[:player1])
-    $player2 = Player.new(params[:player2])
-    redirect to('/play')
+    @game = Game.create(params[:player1], params[:player2])
+    redirect to('/fight')
   end
 
   get "/play" do
@@ -28,8 +28,12 @@ class Battle < Sinatra::Base
   end
 
   get "/attack" do
-    $game.cycle
+    @game.cycle
     erb(:attack)
+  end
+
+  get "/gameover" do
+    erb(:gameover)
   end
 
   run! if app_file == $0

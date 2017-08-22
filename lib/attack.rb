@@ -7,7 +7,10 @@ class Attack
   end
 
   def inflict_damage_on(player)
-    player.player_hp -= 10
+    @damage = rand(11)
+    player.player_hp -= @damage
   end
+
+  attr_reader :damage
 
 end

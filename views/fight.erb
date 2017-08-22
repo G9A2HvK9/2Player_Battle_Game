@@ -1,4 +1,4 @@
-<img src="https://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-48.gif?w=768&h=384" style='position:fixed;top:0px;left;0px;width:100%;height100%;z-index:-1;'>
+<img src="https://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-48.gif?w=768&h=384" style='position:fixed;top:0px;left:0px;width:110%;height110%;z-index:-1;'>
 
 <audio controls autoplay>
  <source src="http://66.90.93.122/ost/street-fighter-2-turbo/tqwbodpekf/27.-cammy-stage.mp3" type="audio/mpeg">
@@ -35,12 +35,12 @@
 
 <div style="position:fixed;top:30px;left:30px">
     <h1>Player 1</h1>
-    <p><%= $player1.player_name %> - <%= $player1.player_hp %> HP</p>
+    <p id="player1_name"><%= @game.player1.player_name %> - <%= @game.player1.player_hp %> / 100HP</p>
 </div>
 
 <div style="position:fixed;top:30px;right:30px">
     <h1>Player 2</h1>
-    <p><%= $player2.player_name %> - <%= $player2.player_hp %> HP</p>
+    <p id="player2_name"><%= @game.player2.player_name %> - <%= @game.player2.player_hp %> / 100HP</p>
 </div>
 
   <div>
