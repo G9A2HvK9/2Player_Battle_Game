@@ -1,12 +1,6 @@
 class Game
 
-  attr_reader :turn, :player1, :player2, :damage
-
-  def initialize(player1, player2)
-    @turn = 1
-    @player1 = Player.new(player1)
-    @player2 = Player.new(player2)
-  end
+  attr_reader :player1, :player2, :turn,
 
   def self.create(player1, player2)
     @game_instance ||= Game.new(player1, player2)
@@ -16,9 +10,8 @@ class Game
     @game_instance
   end
 
-  def play_attack(player1, player2)
-    @turn.odd? ? player1.attack(player2) : player2.attack(player1)
-    increase_turn_count
+  def increase_turn_count
+    @turn += 1
   end
 
   def game_over
@@ -29,15 +22,12 @@ class Game
     end
   end
 
-  def inflict_damage_on(player)
-    @damage = rand(11)
-    player.player_hp -= @damage
-  end
-
   private
 
-  def increase_turn_count
-    @turn += 1
+  def initialize(player1, player2)
+    @player1 = Player.new(player1)
+    @player2 = Player.new(player2)
+    @turn = 1
   end
 
 end

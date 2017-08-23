@@ -27,7 +27,9 @@ class Battle < Sinatra::Base
   end
 
   get "/attack" do
-    @game.play_attack(@game.player1, @game.player2)
+    @damage = rand(11)
+    @game.turn.odd? ? @game.player1.attack(@game.player2, @damage) : @game.player2.attack(@game.player1, @damage)
+    @game.increase_turn_count
     erb(:attack)
   end
 

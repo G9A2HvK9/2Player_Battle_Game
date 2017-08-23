@@ -1,8 +1,8 @@
 <html>
 <% if @game.turn.odd? %>
-<%= @game.player1.player_name %> attacked <%= @game.player2.player_name %> and caused <%=@game.damage%> damage
+<%= @game.player1.player_name %> attacked <%= @game.player2.player_name %> and caused <%= @damage %> damage.
 <% elsif @game.turn.even? %>
-<%= @game.player2.player_name %> attacked <%= @game.player1.player_name %> and caused <%=@game.damage%> damage
+<%= @game.player2.player_name %> attacked <%= @game.player1.player_name %> and cause <%= @damage %> damage.
 <% end %>
 
 <% if @game.player1.player_hp > 0 && @game.player2.player_hp > 0%>

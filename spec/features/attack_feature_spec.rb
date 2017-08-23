@@ -16,10 +16,10 @@ feature 'Feature Testing the Attack Screen' do
 
   scenario 'The players change turns attacking each other' do
     visit('/attack')
-    expect(page).to have_content('Name 1 attacked Name 2 and caused')
+    expect(page).to have_content('Name 1 attacked Name 2')
     click_button('Next Turn')
     click_button('Attack!')
-    expect(page).to have_content('Name 2 attacked Name 1 and caused')
+    expect(page).to have_content('Name 2 attacked Name 1')
   end
 
 end
