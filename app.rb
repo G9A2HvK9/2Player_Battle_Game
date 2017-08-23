@@ -27,7 +27,7 @@ class Battle < Sinatra::Base
   end
 
   get "/attack" do
-    @game.cycle
+    @game.play_attack(@game.player1, @game.player2)
     erb(:attack)
   end
 

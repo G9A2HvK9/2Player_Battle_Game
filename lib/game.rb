@@ -16,14 +16,9 @@ class Game
     @game_instance
   end
 
-  def cycle
-    if @turn.odd?
-      inflict_damage_on(@player1)
-      @turn +=1
-    elsif @turn.even?
-      inflict_damage_on(@player2)
-      @turn +=1
-    end
+  def play_attack(player1, player2)
+    @turn.odd? ? player1.attack(player2) : player2.attack(player1)
+    increase_turn_count
   end
 
   def game_over
@@ -37,6 +32,12 @@ class Game
   def inflict_damage_on(player)
     @damage = rand(11)
     player.player_hp -= @damage
+  end
+
+  private
+
+  def increase_turn_count
+    @turn += 1
   end
 
 end
