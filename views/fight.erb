@@ -34,13 +34,13 @@
 
 
 <div style="position:fixed;top:30px;left:30px">
-    <h1>Player 1</h1>
-    <p id="player1_name"><%= @game.player1.player_name %> - <%= @game.player1.player_hp %> / 100HP</p>
+    <h1 id="player1_label">Player 1</h1>
+    <p id="player1_name"><%= @game.player1.player_name %></p> - <p id="player1_hp"><%= @game.player1.player_hp %> / 100HP</p>
 </div>
 
 <div style="position:fixed;top:30px;right:30px">
-    <h1>Player 2</h1>
-    <p id="player2_name"><%= @game.player2.player_name %> - <%= @game.player2.player_hp %> / 100HP</p>
+    <h1 id="player2_label">Player 2</h1>
+    <p id="player2_name"><%= @game.player2.player_name %></p> - <p id="player2_hp"><%= @game.player2.player_hp %> / 100HP</p>
 </div>
 
   <div>

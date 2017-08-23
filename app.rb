@@ -4,7 +4,6 @@ require "./lib/attack.rb"
 require "./lib/game.rb"
 
 class Battle < Sinatra::Base
-  attr_reader :game
 
   before do
     @game = Game.instance
