@@ -33,7 +33,7 @@ class Battle < Sinatra::Base
   end
 
   get "/gameover" do
-    erb(:gameover)
+    erb(:game_over)
   end
 
   run! if app_file == $0
