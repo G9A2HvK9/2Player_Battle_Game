@@ -12,6 +12,8 @@ class Player
     @player_hp -= damage
   end
 
+  private
+
   def initialize(player_name, player_hp=(rand(21)+80))
     @player_name = player_name
     @player_hp = player_hp
