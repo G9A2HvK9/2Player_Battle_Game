@@ -6,6 +6,11 @@ require "./lib/game_over.rb"
 class Battle < Sinatra::Base
   enable :sessions
 
+  post "/" do
+    session.clear
+    redirect to("/")
+  end
+
   get "/" do
     session.clear
     erb(:home)

@@ -48,9 +48,22 @@
     <iframe src="//giphy.com/embed/xUPGcFU8QyGj1GLt3a" style='position:fixed;bottom:65px;right:30px' width="248.74493927125508" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></a>
   </div>
 
-  <form action="/attack">
-    <input type="submit" value="Attack!" style="position:fixed;bottom:50px;left:667px;width:100px">
-  </form>
+
+  <% if @game.turn.odd? %>
+    <form action="/attack">
+      <input type="submit" value="<%= @game.player1.player_name %> Attack!" style="position:fixed;bottom:50px;left:667px;width:100px">
+    </form>
+  <% else %>
+    <form action="/attack">
+      <input type="submit" value="<%= @game.player2.player_name %> Attack!" style="position:fixed;bottom:50px;left:667px;width:100px">
+    </form>
+  <% end %>
+
+  <div id="quit_game_button">
+    <form action="/" method="post">
+      <input type="submit" value="Quit Game">
+    </form>
+  </div>
 
 
 </html>

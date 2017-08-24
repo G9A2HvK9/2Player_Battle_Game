@@ -7,9 +7,9 @@
   <body>
     <div id="attack_message">
       <% if @game.turn.odd? %>
-        <%= @game.player1.player_name %> attacked <%= @game.player2.player_name %> and caused <%= @damage %> damage.
+        <%= @game.player2.player_name %> attacked <%= @game.player1.player_name %> and caused <%= @damage %> damage.
       <% else %>
-        <%= @game.player2.player_name %> attacked <%= @game.player1.player_name %> and cause <%= @damage %> damage.
+        <%= @game.player1.player_name %> attacked <%= @game.player2.player_name %> and caused <%= @damage %> damage.
       <% end %>
     </div>
 
@@ -21,6 +21,10 @@
       <% else %>
         <form action="/fight" method="get">
           <input type="submit" value="Next Turn">
+        </form>
+
+        <form action="/" method="post">
+          <input type="submit" value="Quit Game">
         </form>
       <% end %>
     </div>
