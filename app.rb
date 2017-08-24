@@ -26,13 +26,12 @@ class Battle < Sinatra::Base
   end
 
   get "/attack" do
-    @damage = rand(11)
-    @game.turn.odd? ? @game.player1.attack(@game.player2, @damage) : @game.player2.attack(@game.player1, @damage)
-    @game.increase_turn_count
+    @damage = 50
+    @game.play_turn(@game.player1, @game.player2, @damage)
     erb(:attack)
   end
 
-  get "/gameover" do
+  get "/game_over" do
     erb(:game_over)
   end
 

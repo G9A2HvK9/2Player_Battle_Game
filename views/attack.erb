@@ -1,17 +1,28 @@
+<!DOCTYPE html>
 <html>
-<% if @game.turn.odd? %>
-<%= @game.player1.player_name %> attacked <%= @game.player2.player_name %> and caused <%= @damage %> damage.
-<% elsif @game.turn.even? %>
-<%= @game.player2.player_name %> attacked <%= @game.player1.player_name %> and cause <%= @damage %> damage.
-<% end %>
+  <head>
+    <title> Attack! </title>
+  </head>
 
-<% if @game.player1.player_hp > 0 && @game.player2.player_hp > 0%>
-  <form action="/fight" method="get">
-    <input type="submit" value="Next Turn">
-  </form>
-<% elsif @game.player1.player_hp <= 0 || @game.player2.player_hp <= 0%>
-  <form action="/game_over" method="get">
-    <input type="submit" value="Next Turn">
-  </form>
-<% end %>
+  <body>
+    <div id="attack_message">
+      <% if @game.turn.odd? %>
+        <%= @game.player1.player_name %> attacked <%= @game.player2.player_name %> and caused <%= @damage %> damage.
+      <% else %>
+        <%= @game.player2.player_name %> attacked <%= @game.player1.player_name %> and cause <%= @damage %> damage.
+      <% end %>
+    </div>
+
+    <div id="next_turn_button">
+      <% if @game.game_over %>
+        <form action="/game_over" method="post">
+          <input type="submit" value="Game Over">
+        </form>
+      <% else %>
+        <form action="/fight" method="get">
+          <input type="submit" value="Next Turn">
+        </form>
+      <% end %>
+    </div>
+  </body>
 </html>

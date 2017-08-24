@@ -1,6 +1,6 @@
 class Game
 
-  attr_reader :player1, :player2, :turn,
+  attr_reader :player1, :player2, :turn, :game_over
 
   def self.create(player1, player2)
     @game_instance ||= Game.new(player1, player2)
@@ -10,16 +10,10 @@ class Game
     @game_instance
   end
 
-  def increase_turn_count
-    @turn += 1
-  end
-
-  def game_over
-    if @player1.player_hp <= 0
-      puts "Player 1 loses!"
-    elsif @player2.player_hp <= 0
-      puts "Player 2 loses"
-    end
+  def play_turn(player1, player2, damage)
+    play_attack(player1, player2, damage)
+    game_over?(player1, player2)
+    increase_turn_count
   end
 
   private
@@ -28,6 +22,18 @@ class Game
     @player1 = Player.new(player1)
     @player2 = Player.new(player2)
     @turn = 1
+  end
+
+  def play_attack(player1, player2, damage)
+    @turn.odd? ? @player1.attack(@player2, damage) : @player2.attack(@player1, damage)
+  end
+
+  def game_over?(player1, player2)
+    @game_over = (player1.player_hp <= 0 || player2.player_hp <= 0)
+  end
+
+  def increase_turn_count
+    @turn += 1
   end
 
 end

@@ -9,6 +9,12 @@ feature 'Feature Testing the Home Screen' do
     visit('/')
   end
 
+  scenario 'The Page exists' do
+    visit '/'
+    expect(page).to have_current_path('/')
+    expect(page.status_code).to eq(200)
+  end
+
   scenario 'Home Page displays a label for Player 1' do
     expect(page).to have_css('h2#player1_label', :text => 'Player 1')
   end

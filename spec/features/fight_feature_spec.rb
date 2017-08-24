@@ -9,6 +9,12 @@ feature 'Feature Testing the Fight screen' do
     sign_in_and_play
   end
 
+  scenario 'The Page exists' do
+    visit '/fight'
+    expect(page).to have_current_path('/fight')
+    expect(page.status_code).to eq(200)
+  end
+
   scenario 'Player names are displayed correctly on the fight screen' do
     expect(page).to have_css('p#player1_name', :text => 'Name 1')
     expect(page).to have_css('p#player2_name', :text => 'Name 2')
@@ -29,6 +35,7 @@ feature 'Feature Testing the Fight screen' do
     visit('/fight')
     click_button('Attack!')
     expect(page).to have_current_path('/attack')
+    expect(page.status_code).to eq(200)
   end
 
 end
