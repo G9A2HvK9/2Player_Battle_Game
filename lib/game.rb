@@ -2,14 +2,6 @@ class Game
 
   attr_reader :player1, :player2, :turn, :game_over
 
-  def self.create(player1, player2)
-    @game_instance ||= Game.new(player1, player2)
-  end
-
-  def self.instance
-    @game_instance
-  end
-
   def play_turn(player1, player2, damage)
     play_attack(player1, player2, damage)
     game_over?(player1, player2)

@@ -49,21 +49,5 @@ describe Game do
         expect{ game.play_turn(game.player1, game.player2, 100) }.to change{ game.game_over }.to(true)
       end
     end
-
   end
-
-  #Class methods. Check that subject responds top .self methods
-
-  describe '#self.create' do
-    it 'creates a new instance of the Game class' do
-      expect( game.class.create('test1', 'test2') ).to be_an_instance_of(Game)
-    end
-  end
-
-  describe '#self.instance' do
-    it 'creates a new instance of the Game class' do
-      expect( game.class.instance ).to be_an_instance_of(Game)
-    end
-  end
-
 end

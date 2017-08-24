@@ -1,7 +1,5 @@
 class Game_Over
 
-  attr_reader :message
-
   def message
     "Game Over. #{@winner.player_name} wins!"
   end
