@@ -1,8 +1,10 @@
 require "sinatra/base"
 require "./lib/player.rb"
 require "./lib/game.rb"
+require "./lib/game_over.rb"
 
 class Battle < Sinatra::Base
+  enable :sessions
 
   before do
     @game = Game.instance
@@ -31,7 +33,13 @@ class Battle < Sinatra::Base
     erb(:attack)
   end
 
+  post "/game_over" do
+    session[:game_over] = Game_Over.new(@game.player1, @game.player2)
+    redirect to('game_over')
+  end
+
   get "/game_over" do
+    @game_over_message = session[:game_over].message
     erb(:game_over)
   end
 
