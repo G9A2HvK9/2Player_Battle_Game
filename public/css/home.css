@@ -15,7 +15,7 @@ h1 {
 
 h2 {
     color: red;
-    font-family: "Monsters Attack!";
+    font-family: "Feast of Flesh BB";
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-size: 200%;
 }
@@ -48,7 +48,7 @@ h2 {
 }
 
 input[type="submit"]{
-   font-family: "Feast of Flesh BB";
+   font-family: "Monsters Attack!";
 
    background: none;
    border: none;
@@ -65,7 +65,7 @@ input[type="submit"]{
 #fight_button:hover {
     font-size: 500%;
     color: yellow;
-    text-shadow: -6px 0 red, 0 6px red, 6px 0 red, 0 -6px red;
+    text-shadow: -6px 0 black, 0 6px black, 6px 0 black, 0 -6px black;
 }
 
 #player1_input{

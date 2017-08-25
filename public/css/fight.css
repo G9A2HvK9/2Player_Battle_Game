@@ -1,9 +1,9 @@
 html {
-    background: url("../images/streetfighter_background.gif") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background: url("../images/streetfighter_background.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 h1 {
@@ -11,26 +11,26 @@ h1 {
 }
 
 h2 {
-    color: red;
-    font-family: "Monsters Attack!";
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-size: 200%;
+  color: red;
+  font-family: "Monsters Attack!";
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 200%;
 }
 
 #player1_column{
-    background: none;
-    position: fixed;
-    height: 100%;
-    width: 12%;
-    left: 12%;
+  background: none;
+  position: fixed;
+  height: 100%;
+  width: 12%;
+  left: 12%;
 }
 
 #player2_column{
-    background: none;
-    position: fixed;
-    height: 100%;
-    width: 12%;
-    right: 12%;
+  background: none;
+  position: fixed;
+  height: 100%;
+  width: 12%;
+  right: 12%;
 }
 
 iframe{
@@ -86,43 +86,54 @@ iframe{
 
 /* Fight Button Styling (Form Submit Button) */
 
-#attack_button_wrapper{
-    margin: auto 0;
-    text-align: center;
-}
-
 input[type="submit"]{
-   font-family: "Monsters Attack!";
-
-   background: none;
-   border: none;
-   margin: 0;
-   padding:0;
- }
-
-#fight_button {
-    font-size: 400%;
-    color: red;
-    text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+  background: none;
+  border: none;
+  padding:0;
 }
 
-#fight_button:hover {
-    font-size: 500%;
-    color: yellow;
-    text-shadow: -6px 0 black, 0 6px black, 6px 0 black, 0 -6px black;
+#button_wrapper{
+  background: none;
+  position: fixed;
+  width: 100%;
+  bottom: 8%;
 }
 
-#player1_input{
-  position:fixed;
-  bottom:50px;
-  left:50px;
+#attack_button_wrapper{
+  margin: auto 0;
+  text-align: center;
 }
 
-#player2_input{
-  position:fixed;
-  bottom:50px;
-  right:50px;
+#attack_button{
+  font-family: "Feast of Flesh BB";
+  font-size: 400%;
+  color: red;
+  text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
 }
 
-.player_input{
+#attack_button:hover{
+  font-family: "Feast of Flesh BB";
+  font-size: 500%;
+  color: yellow;
+  text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+}
+
+#quit_game_button_wrapper{
+  margin: auto 0;
+  text-align: center;
+}
+
+#quit_game_button {
+  font-family: "Monsters Attack!";
+  color: red;
+  font-size: 100%;
+  color: black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#quit_game_button:hover {
+  font-family: "Monsters Attack!";
+  font-size: 120%;
+  color: black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
