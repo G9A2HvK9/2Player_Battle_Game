@@ -1,52 +1,29 @@
-<img src="https://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-48.gif?w=768&h=384" style='position:fixed;top:0px;left:0px;width:110%;height110%;z-index:-1;'>
-
-<audio controls autoplay>
- <source src="http://66.90.93.122/ost/street-fighter-2-turbo/tqwbodpekf/27.-cammy-stage.mp3" type="audio/mpeg">
- Your browser does not support the audio element.
-</audio>
-
-
+<!DOCTYPE html>
 <html>
-<head>
-<style>
-  h1{
-    color:red;
-    font-family: "Feast of Flesh BB";
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-size: 300%;
-  }
+  <head>
+    <link rel="stylesheet" href="css/fight.css" type="text/css">
+    <audio autoplay>
+      <source src="audio/fight_audio.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </head>
 
-  h2{
-    color:red;
-    font-family: "Monsters Attack!";
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-size: 150%
-  }
+  <body>
+    <div id="player1_column">
+      <div id="player_name"><%= @game.player1.player_name %></div>
+      <div id="player_hp"><%= @game.player1.player_hp %> HP</div>
+      <div id="player_label">Player 1</div>
+      <iframe src="images/player_1_image.gif"></iframe>
+    </div>
 
-  p{
-    color: black;
-    font-family: "Monsters Attack!";
-    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
-    font-size: 100%
-  }
-</style>
-</head>
-
-
-<div style="position:fixed;top:30px;left:30px">
-    <h1 id="player1_label">Player 1</h1>
-    <p id="player1_name"><%= @game.player1.player_name %></p> - <p id="player1_hp"><%= @game.player1.player_hp %> / 100HP</p>
-</div>
-
-<div style="position:fixed;top:30px;right:30px">
-    <h1 id="player2_label">Player 2</h1>
-    <p id="player2_name"><%= @game.player2.player_name %></p> - <p id="player2_hp"><%= @game.player2.player_hp %> / 100HP</p>
-</div>
-
-  <div>
-    <iframe src="//giphy.com/embed/Jmv56riXdGoHm" style='position:fixed;bottom:65px;left:30px' width="239.49895615866387" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></a>
-    <iframe src="//giphy.com/embed/xUPGcFU8QyGj1GLt3a" style='position:fixed;bottom:65px;right:30px' width="248.74493927125508" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></a>
-  </div>
+    <div id="player2_column">
+      <div id="player_name"><%= @game.player2.player_name %></div>
+      <div id="player_hp"><%= @game.player2.player_hp %> HP</div>
+      <div id="player1_sprite_wrapper">
+        <div id="player_label">Player 2</div>
+        <iframe src="images/player_2_image.gif"></iframe></a>
+      </div>
+    </div>
 
 
   <% if @game.turn.odd? %>
