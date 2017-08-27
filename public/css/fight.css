@@ -1,3 +1,5 @@
+/* Background Image styling. Whole HTML file */
+
 html {
   background: url("../images/streetfighter_background.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -6,16 +8,9 @@ html {
   background-size: cover;
 }
 
-h1 {
-
-}
-
-h2 {
-  color: red;
-  font-family: "Monsters Attack!";
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-size: 200%;
-}
+/* Divs for the columns pertaining to respective players
+All further positioning of player sprites etc.
+depends on these columns */
 
 #player1_column{
   background: none;
@@ -33,6 +28,8 @@ h2 {
   right: 12%;
 }
 
+/* Player sprites */
+
 iframe{
   height: 100%;
   width: 100%;
@@ -43,7 +40,7 @@ iframe{
   border: none;
 }
 
-/* Player Name Input Fields (Form Text Input) */
+/* Player labels & hp displays */
 
 #player_label{
   background: none;
@@ -68,7 +65,7 @@ iframe{
   display: inline-block;
   text-align: center;
   position: fixed;
-  top: 26%;
+  top: 27%;
 }
 
 #player_hp{
@@ -79,20 +76,22 @@ iframe{
   font-size: 200%;
 
   display: inline-block;
-  float: right;
-  position: relative;
-  top: 26%;
+  text-align: center;
+  position: fixed;
+  top: 33%;
 }
 
-/* Fight Button Styling (Form Submit Button) */
+/* Button styling - Attack Button and Quit Game */
 
 input[type="submit"]{
   background: none;
   border: none;
-  padding:0;
+  padding: 0;
 }
 
-#button_wrapper{
+/* Attack Button */
+
+#attack_button_row{
   background: none;
   position: fixed;
   width: 100%;
@@ -116,6 +115,15 @@ input[type="submit"]{
   font-size: 500%;
   color: yellow;
   text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+}
+
+/* Quite Game Button */
+
+#quit_game_button_row{
+  background: none;
+  position: fixed;
+  width: 100%;
+  bottom: 5%;
 }
 
 #quit_game_button_wrapper{

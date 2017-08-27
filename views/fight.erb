@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/fight.css" type="text/css">
     <audio autoplay>
       <source src="audio/fight_audio.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
+        Your browser does not support the audio element.
     </audio>
   </head>
 
@@ -25,26 +25,27 @@
       </div>
     </div>
 
-
-  <div id="button_wrapper">
-    <div id="attack_button_wrapper">
-      <% if @game.turn.odd? %>
+    <div id="attack_button_row">
+      <div id="attack_button_wrapper">
+        <% if @game.turn.odd? %>
         <form method="get" action="/attack">
           <input id="attack_button" type="submit" value="<%= @game.player1.player_name %>, Attack!">
         </form>
-      <% else %>
+        <% else %>
         <form method="get" action="/attack">
           <input id="attack_button" type="submit" value="<%= @game.player2.player_name %>, Attack!">
         </form>
-      <% end %>
+        <% end %>
+      </div>
     </div>
 
-    <div id="quit_game_button_wrapper">
-      <form action="/" method="post">
-        <input id="quit_game_button" type="submit" value="Quit Game">
-      </form>
+    <div id="quit_game_button_row">
+      <div id="quit_game_button_wrapper">
+        <form action="/" method="post">
+          <input id="quit_game_button" type="submit" value="Quit Game">
+        </form>
+      </div>
     </div>
-  </div>
 
-
+  </body>
 </html>
