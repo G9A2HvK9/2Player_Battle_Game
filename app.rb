@@ -34,7 +34,7 @@ class Battle < Sinatra::Base
   get "/attack" do
     check_for_session
     @game = session[:game]
-    @damage = 50
+    @damage = rand(11)
     @game.play_turn(@game.player1, @game.player2, @damage)
     erb(:attack)
   end

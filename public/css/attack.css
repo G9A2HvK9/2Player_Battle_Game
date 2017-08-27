@@ -1,6 +1,6 @@
 /* Background Image styling. Whole HTML file */
 
-html {
+ {
   background: url("../images/streetfighter_background.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -13,7 +13,7 @@ All further positioning of player sprites etc.
 depends on these columns */
 
 #player1_column{
-  background: none;
+  background: pink;
   position: fixed;
   height: 100%;
   width: 12%;
@@ -21,11 +21,19 @@ depends on these columns */
 }
 
 #player2_column{
-  background: none;
+  background: green;
   position: fixed;
   height: 100%;
   width: 12%;
   right: 12%;
+}
+
+#center_column{
+  background: orange;
+  position: fixed;
+  height: 100%;
+  width: 33%;
+  left: 50%;
 }
 
 /* Player sprites */
