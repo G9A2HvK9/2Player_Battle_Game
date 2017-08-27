@@ -1,37 +1,29 @@
-<img src="https://i.ytimg.com/vi/rEf7lCKSn24/maxresdefault.jpg" style='position:fixed;top:0px;left;0px;width:100%;height100%;z-index:-1;'>
 
-<audio controls autoplay>
- <source src="http://66.90.93.122/ost/street-fighter-2-turbo/qvifdxccss/02.-player-select.mp3" type="audio/mpeg">
- Your browser does not support the audio element.
-</audio>
-
-
+<!DOCTYPE html>
 <html>
-<style>
-h2{
-  color:red;
-  font-family: "Monsters Attack!";
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-size: 150%
-}
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css" type="text/css">
+    <audio autoplay>
+      <source src="http://66.90.93.122/ost/street-fighter-2-turbo/qvifdxccss/02.-player-select.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </head>
 
-#btn_s{
- width:100px;
- margin-left:auto;
- margin-right:auto;
-}
+  <body>
+    <h2 id="player1_label" style="">Player 1</h2>
+    <h2 id="player2_label" >Player 2</h2>
 
+    <div id="sign_in_form_wrapper">
+      <form id="sign_in_form" action='/fight' method = 'post'>
+        <input id="player1_input" class="player_input" type="text" name="player1" placeholder="Enter Name">
+        <input id="player2_input" class="player_input" type="text" name="player2" placeholder="Enter Name">
+        <div id="fight_button_wrapper">
+          <input id="fight_button" type="submit" value="Fight!">
+        </div>
+      </form>
+    </div>
 
-</style>
-
-  <h1 id="sign_in_message">You need to sign in to begin the game</h1>
-  <h2 id="player1_label" style="position:fixed;bottom:70px;left:55px">Player 1</h2>
-  <h2 id="player2_label" style="position:fixed;bottom:70px;right:60px">Player 2</h2>
-
-  <form action='/fight' method = 'post'>
-      <input id="player1_input" type="text" name="player1" style="position:fixed;bottom:50px;left:50px" >
-      <input id="player2_input" type="text" name="player2" style="position:fixed;bottom:50px;right:50px">
-      <input id="fight_button" type="submit" value="Fight!" style="position:fixed;bottom:50px;left:667px;width:100px">
-  </form>
+  </body>
 
 </html>

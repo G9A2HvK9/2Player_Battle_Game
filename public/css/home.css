@@ -1,0 +1,84 @@
+html {
+    background: url("../images/loadingscreen_background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    font-family: "Monsters Attack!";
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 300%;
+}
+
+h2 {
+    color: red;
+    font-family: "Feast of Flesh BB";
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 200%;
+}
+
+#sign_in_form_wrapper{
+  position: fixed;
+  width: 100%;
+  bottom: 5%;
+}
+
+/* Player Name Input Fields (Form Text Input) */
+
+#player1_label {
+  position: fixed;
+  bottom:70px;
+  left:55px;
+}
+
+#player2_label {
+  position: fixed;
+  bottom:70px;
+  right:55px;
+}
+
+/* Fight Button Styling (Form Submit Button) */
+
+#fight_button_wrapper{
+    margin: auto 0;
+    text-align: center;
+}
+
+input[type="submit"]{
+   font-family: "Monsters Attack!";
+
+   background: none;
+   border: none;
+   margin: 0;
+   padding:0;
+ }
+
+#fight_button {
+    font-size: 400%;
+    color: red;
+    text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+}
+
+#fight_button:hover {
+    font-size: 500%;
+    color: yellow;
+    text-shadow: -6px 0 black, 0 6px black, 6px 0 black, 0 -6px black;
+}
+
+#player1_input{
+  position:fixed;
+  bottom:50px;
+  left:50px;
+}
+
+#player2_input{
+  position:fixed;
+  bottom:50px;
+  right:50px;
+}
+
+.player_input{
+}

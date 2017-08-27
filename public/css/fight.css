@@ -1,0 +1,147 @@
+/* Background Image styling. Whole HTML file */
+
+html {
+  background: url("../images/streetfighter_background.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Divs for the columns pertaining to respective players
+All further positioning of player sprites etc.
+depends on these columns */
+
+#player1_column{
+  background: none;
+  position: fixed;
+  height: 100%;
+  width: 12%;
+  left: 12%;
+}
+
+#player2_column{
+  background: none;
+  position: fixed;
+  height: 100%;
+  width: 12%;
+  right: 12%;
+}
+
+/* Player sprites */
+
+iframe{
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  position: fixed;
+  top: 45%;
+  border: none;
+}
+
+/* Player labels & hp displays */
+
+#player_label{
+  background: none;
+  color: red;
+  font-family: "Feast of Flesh BB";
+  text-shadow: -6px 0 white, 0 6px white, 6px 0 white, 0 -6px white;
+  font-size: 500%;
+
+  display: inline-block;
+  text-align: center;
+  position: fixed;
+  top: 18%;
+}
+
+#player_name{
+  background: none;
+  color: black;
+  font-family: "Feast of Flesh BB";
+  text-shadow: -6px 0 red, 0 6px red, 6px 0 red, 0 -6px red;
+  font-size: 300%;
+
+  display: inline-block;
+  text-align: center;
+  position: fixed;
+  top: 27%;
+}
+
+#player_hp{
+  background: none;
+  color: black;
+  font-family: "Monsters Attack!";
+  text-shadow: -3px 0 red, 0 3px red, 3px 0 red, 0 -3px red;
+  font-size: 200%;
+
+  display: inline-block;
+  text-align: center;
+  position: fixed;
+  top: 33%;
+}
+
+/* Button styling - Attack Button and Quit Game */
+
+input[type="submit"]{
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Attack Button */
+
+#attack_button_row{
+  background: none;
+  position: fixed;
+  width: 100%;
+  bottom: 8%;
+}
+
+#attack_button_wrapper{
+  margin: auto 0;
+  text-align: center;
+}
+
+#attack_button{
+  font-family: "Feast of Flesh BB";
+  font-size: 400%;
+  color: red;
+  text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+}
+
+#attack_button:hover{
+  font-family: "Feast of Flesh BB";
+  font-size: 500%;
+  color: yellow;
+  text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+}
+
+/* Quite Game Button */
+
+#quit_game_button_row{
+  background: none;
+  position: fixed;
+  width: 100%;
+  bottom: 5%;
+}
+
+#quit_game_button_wrapper{
+  margin: auto 0;
+  text-align: center;
+}
+
+#quit_game_button {
+  font-family: "Monsters Attack!";
+  color: red;
+  font-size: 100%;
+  color: black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#quit_game_button:hover {
+  font-family: "Monsters Attack!";
+  font-size: 120%;
+  color: black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
