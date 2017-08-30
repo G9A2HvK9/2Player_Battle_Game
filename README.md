@@ -32,13 +32,19 @@ The testsuite for this program was written using rspec and capybara. The tests a
 ### Structure
 
   * The game is constructed out of 3 seperate objects
+  
     1. `game` understands how to `play turns` and is dependent on the `player`object
+    
     2. `player`understands how to `reduce player_hp`
+    
     3. `game_over`understands how to `display game over message` once `player_hp`is equal to or less than 0
    
   * The game is presented in 3 different views
+  
     1. `home` prompts for player name input and clears any sessions
+    
     2. `fight` displays player sprites and background. Also shows `player_name` and `player_hp`
+    
     3. `attack` displays the resulting `damage` from the previous attack as well as the `game over message`
     
 ## Product Journey
