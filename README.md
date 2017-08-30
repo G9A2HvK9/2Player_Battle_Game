@@ -8,4 +8,4 @@ The complexity was intentionally kept to a minimum in order to present a clean, 
 
 * Fork and clone this repository
 * From the command-line, install the dependencies
-code($bundle install)
+  `$bundle install)`
