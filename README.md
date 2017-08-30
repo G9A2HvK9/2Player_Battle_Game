@@ -6,7 +6,7 @@ The complexity was intentionally kept to a minimum in order to present a clean, 
 
 ## Installing and Running the Program
 
-  1. Make sure you have ruby installed on your machine (if not, download and install ruby [here](https://www.ruby-lang.org/en/downloads/)
+  1. Make sure you have ruby installed on your machine (if not, download and install ruby [here](https://www.ruby-lang.org/en/downloads/))
 
   `~ $ ruby -v`
 
