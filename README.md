@@ -68,7 +68,3 @@ The testsuite for this program was written using rspec and capybara. The tests a
   * To maintain single responsibility, an `Attack Class`shoudl be created, which takes `player1` and `player2` and `damage` as arguments
   * Once the `Attack Class` is in existence, it should be fairly easy to implement a variety of attacks, dealing different damage
   * Guard conditions need to be put in place and tested
-  
-## Screenshots
-
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/fK4BC"><a href="//imgur.com/fK4BC">2Player Battle Game</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
