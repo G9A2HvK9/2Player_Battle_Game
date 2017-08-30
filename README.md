@@ -7,7 +7,9 @@ The complexity was intentionally kept to a minimum in order to present a clean, 
 ## Installing and Running the Program
 
 1. Make sure you have ruby installed on your machine (if not, download and install ruby [here](https://www.ruby-lang.org/en/downloads/)
+
 `~ $ ruby -v`
+
 2. Fork and clone this repository into a directory of your choice
 2. Switch into the correct directory on your machine
 3. From the command-line, install the dependencies
