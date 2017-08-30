@@ -52,22 +52,30 @@ The testsuite for this program was written using rspec and capybara. The tests a
 ### Rationale
 
   * Players alternate turns based on a `turn_counter` which is contained in the `Game Class`
+  
   * Players have an attribute `player_hp` which is dynamically reduced, based on damange dealt
+  
   * Persistence was achieved using sessions as these are easy to implement and can be cleared to easily achieve `quit game`functionality
   
 
 ### Direct Learning Experiences
 
-  * Hosting static objects on a sinatra app by detailing the `./public` directory at the top of the `app.rb` file
+  * Hosting static objects on a sinatra app by declaring the `./public` directory at the top of the `app.rb` file
+  
   * Reliably orienting elements on a page view using CSS styling (`x-axis`, `y-axis` orientation)
+  
   * Understanding guard conditions as part of the product journey; not adding them at the end of the product
+  
   * Persisting data through class methods (`self.create` & `self.instance`) is elegant but difficult to clear
+  
   * Engaging with the online develoepr community via sites like stack overflow to get feedback on struggles
   
 ### Improvements & Future Steps
 
   * To maintain single responsibility, an `Attack Class`shoudl be created, which takes `player1` and `player2` and `damage` as arguments
+  
   * Once the `Attack Class` is in existence, it should be fairly easy to implement a variety of attacks, dealing different damage
+  
   * Guard conditions need to be put in place and tested
   
   
