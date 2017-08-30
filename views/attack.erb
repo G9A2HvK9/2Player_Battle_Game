@@ -10,7 +10,7 @@
         <div id="player_name"><%= @game.player1.player_name %></div>
         <div id="player_hp"><%= @game.player1.player_hp %> HP</div>
         <div id="player_label">Player 1</div>
-        <iframe src="images/player_1_image.gif"></iframe>
+        <iframe id="player_sprite" src="images/player_1_image.gif"></iframe>
       </div>
 
       <div id="player2_column">
@@ -18,28 +18,26 @@
         <div id="player_hp"><%= @game.player2.player_hp %> HP</div>
         <div id="player1_sprite_wrapper">
           <div id="player_label">Player 2</div>
-          <iframe src="images/player_2_image.gif">
+          <iframe id="player_sprite" src="images/player_2_image.gif"></iframe>
         </div>
       </div>
 
-    <div id="center_column">
-      <div id="message_visual">
+    <div id="center_message_y">
+      <div id="center_message_x">
         <% if @game.game_over %>
-          <div id="game_over_message"> GAME OVER </div>
+          <div id="game_over_message">
+            <p>GAME OVER</p>
+          </div>
         <% elsif @game.turn.odd?  %>
-          <iframe src="images/arrow_right.gif"></iframe>
+          <div id="attack_message">
+            <%= @game.player2.player_name %> attacked <%= @game.player1.player_name %> and caused <%= @damage %> damage.
+          </div>
         <% else %>
-          <iframe src="images/arrow_left.gif"></iframe>
+          <div id="attack_message">
+            <%= @game.player1.player_name %> attacked <%= @game.player2.player_name %> and caused <%= @damage %> damage.
+          </div>
         <% end %>
       </div>
-    </div>
-
-    <div id="attack_message">
-      <% if @game.turn.odd? %>
-        <%= @game.player2.player_name %> attacked <%= @game.player1.player_name %> and caused <%= @damage %> damage.
-      <% else %>
-        <%= @game.player1.player_name %> attacked <%= @game.player2.player_name %> and caused <%= @damage %> damage.
-      <% end %>
     </div>
 
     <div id="next_turn_button">

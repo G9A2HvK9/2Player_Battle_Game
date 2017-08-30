@@ -1,6 +1,6 @@
 /* Background Image styling. Whole HTML file */
 
- {
+html {
   background: url("../images/streetfighter_background.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -13,7 +13,7 @@ All further positioning of player sprites etc.
 depends on these columns */
 
 #player1_column{
-  background: pink;
+  background: none;
   position: fixed;
   height: 100%;
   width: 12%;
@@ -21,24 +21,16 @@ depends on these columns */
 }
 
 #player2_column{
-  background: green;
+  background: none;
   position: fixed;
   height: 100%;
   width: 12%;
   right: 12%;
 }
 
-#center_column{
-  background: orange;
-  position: fixed;
-  height: 100%;
-  width: 33%;
-  left: 50%;
-}
-
 /* Player sprites */
 
-iframe{
+#player_sprite {
   height: 100%;
   width: 100%;
   display: inline-block;
@@ -87,6 +79,37 @@ iframe{
   text-align: center;
   position: fixed;
   top: 33%;
+}
+
+#center_message_y{
+  background: none;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  top: 55%;
+}
+
+#center_message_y{
+position: fixed;
+margin: auto 0;
+display: inline-block;
+text-align: center;
+}
+
+#attack_message{
+  background: none;
+  color: black;
+  font-family: "Feast of Flesh BB";
+  text-shadow: -2px 0 red, 0 2px red, 2px 0 red, 0 -2px red;
+  font-size: 300%;
+}
+
+#game_over_message{
+  background: none;
+  color: red;
+  font-family: "Feast of Flesh BB";
+  text-shadow: -10px 0 black, 0 10px black, 10px 0 black, 0 -10px black;
+  font-size: 750%;
 }
 
 /* Button styling - Attack Button and Quit Game */
