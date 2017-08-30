@@ -12,14 +12,14 @@ This program was written in ruby and you will need to have ruby installed on you
 
   1. Make sure you have ruby installed on your machine
   
-    `~ $ ruby -v`
+    ~ $ ruby -v
   
   2. If you do not have ruby installed, you can download and install ruby [here](https://www.ruby-lang.org/en/downloads/))
   3. Fork and clone this repository into a directory of your choice
   4. Switch into the correct directory on your machine
   5. From the command-line, install the dependencies
 
-    `~ $ bundle install`
+    ~ $ bundle install
   
 ## Tests
 
@@ -27,7 +27,7 @@ The testsuite for this program was written using rspec and capybara. The tests a
 
   1. To run the tests using rspec 
 
-    `~ $ rspec`
+    ~ $ rspec
   
 ### Structure
 
