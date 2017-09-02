@@ -1,6 +1,6 @@
 /* Background Image styling. Whole HTML file */
 
- {
+html {
   background: url("../images/streetfighter_background.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -13,7 +13,7 @@ All further positioning of player sprites etc.
 depends on these columns */
 
 #player1_column{
-  background: pink;
+  background: none;
   position: fixed;
   height: 100%;
   width: 12%;
@@ -21,24 +21,16 @@ depends on these columns */
 }
 
 #player2_column{
-  background: green;
+  background: none;
   position: fixed;
   height: 100%;
   width: 12%;
   right: 12%;
 }
 
-#center_column{
-  background: orange;
-  position: fixed;
-  height: 100%;
-  width: 33%;
-  left: 50%;
-}
-
 /* Player sprites */
 
-iframe{
+#player_sprite {
   height: 100%;
   width: 100%;
   display: inline-block;
@@ -89,7 +81,38 @@ iframe{
   top: 33%;
 }
 
-/* Button styling - Attack Button and Quit Game */
+#center_message_y{
+  background: none;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  top: 55%;
+}
+
+#center_message_y{
+position: fixed;
+margin: auto 0;
+display: inline-block;
+text-align: center;
+}
+
+#attack_message{
+  background: none;
+  color: black;
+  font-family: "Feast of Flesh BB";
+  text-shadow: -2px 0 red, 0 2px red, 2px 0 red, 0 -2px red;
+  font-size: 300%;
+}
+
+#game_over_message{
+  background: none;
+  color: red;
+  font-family: "Feast of Flesh BB";
+  text-shadow: -10px 0 black, 0 10px black, 10px 0 black, 0 -10px black;
+  font-size: 750%;
+}
+
+/* Button styling - Next Turn Button and Quit Game */
 
 input[type="submit"]{
   background: none;
@@ -97,29 +120,29 @@ input[type="submit"]{
   padding: 0;
 }
 
-/* Attack Button */
+/* Next Turn Button */
 
-#attack_button_row{
+#next_turn_button_row {
   background: none;
   position: fixed;
   width: 100%;
   bottom: 8%;
 }
 
-#attack_button_wrapper{
+#next_turn_button_wrapper{
   background: none;
   margin: auto 0;
   text-align: center;
 }
 
-#attack_button{
+#next_turn_button {
   font-family: "Feast of Flesh BB";
   font-size: 400%;
   color: red;
   text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
 }
 
-#attack_button:hover{
+#next_turn_button:hover {
   font-family: "Feast of Flesh BB";
   font-size: 500%;
   color: yellow;
@@ -127,6 +150,7 @@ input[type="submit"]{
 }
 
 /* Quite Game Button */
+
 
 #quit_game_button_row{
   background: none;
