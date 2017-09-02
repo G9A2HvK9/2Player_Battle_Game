@@ -112,7 +112,7 @@ text-align: center;
   font-size: 750%;
 }
 
-/* Button styling - Attack Button and Quit Game */
+/* Button styling - Next Turn Button and Quit Game */
 
 input[type="submit"]{
   background: none;
@@ -120,29 +120,29 @@ input[type="submit"]{
   padding: 0;
 }
 
-/* Attack Button */
+/* Next Turn Button */
 
-#attack_button_row{
+#next_turn_button_row {
   background: none;
   position: fixed;
   width: 100%;
   bottom: 8%;
 }
 
-#attack_button_wrapper{
+#next_turn_button_wrapper{
   background: none;
   margin: auto 0;
   text-align: center;
 }
 
-#attack_button{
+#next_turn_button {
   font-family: "Feast of Flesh BB";
   font-size: 400%;
   color: red;
   text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
 }
 
-#attack_button:hover{
+#next_turn_button:hover {
   font-family: "Feast of Flesh BB";
   font-size: 500%;
   color: yellow;
@@ -150,6 +150,7 @@ input[type="submit"]{
 }
 
 /* Quite Game Button */
+
 
 #quit_game_button_row{
   background: none;
