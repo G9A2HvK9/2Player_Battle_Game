@@ -23,9 +23,9 @@
   <div id="center_message_y">
     <div id="center_message_x">
       <% if @game.game_over %>
-        <div id="game_over_message">
-          <p>GAME OVER</p>
-        </div>
+          <form action="/" method="post">
+            <input id="game_over_message" type="submit" value = "GAME OVER">
+          </form>
       <% elsif @game.turn.odd?  %>
         <div id="attack_message">
           <%= @game.player2.player_name %> attacked <%= @game.player1.player_name %> and caused <%= @damage %> damage.
@@ -50,7 +50,7 @@
   <% else %>
     <div id="next_turn_button_row">
       <div id="next_turn_button_wrapper">
-        <form action="/fight" method="post">
+        <form action="/fight" method="get">
           <input id="next_turn_button" type="submit" value="Next Turn">
         </form>
       </div>

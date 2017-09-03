@@ -9,7 +9,7 @@ class Player
   end
 
   def reduce_hp(damage)
-    @player_hp -= damage
+    @player_hp - damage > 0 ? @player_hp -= damage : @player_hp = 0
   end
 
   private

@@ -81,7 +81,7 @@ depends on these columns */
   top: 33%;
 }
 
-#center_message_y{
+#center_message_x{
   background: none;
   height: auto;
   width: 100%;
@@ -90,6 +90,7 @@ depends on these columns */
 }
 
 #center_message_y{
+background: none;
 position: fixed;
 margin: auto 0;
 display: inline-block;
@@ -98,10 +99,14 @@ text-align: center;
 
 #attack_message{
   background: none;
-  color: black;
+  color: white;
   font-family: "Feast of Flesh BB";
   text-shadow: -2px 0 red, 0 2px red, 2px 0 red, 0 -2px red;
   font-size: 300%;
+}
+
+#game_over_button_wrapper{
+  bottom: 25%;
 }
 
 #game_over_message{
@@ -112,12 +117,20 @@ text-align: center;
   font-size: 750%;
 }
 
+#game_over_message:hover{
+  background: none;
+  color: yellow;
+  font-family: "Feast of Flesh BB";
+  text-shadow: -15px 0 black, 0 15px black, 15px 0 black, 0 -15px black;
+  font-size: 900%;
+}
+
 /* Button styling - Next Turn Button and Quit Game */
 
 input[type="submit"]{
   background: none;
   border: none;
-  padding: 0;
+  padding: 50;
 }
 
 /* Next Turn Button */
