@@ -68,3 +68,13 @@ The testsuite for this program was written using rspec and capybara. The tests a
   * To maintain single responsibility, an `Attack Class`shoudl be created, which takes `player1` and `player2` and `damage` as arguments
   * Once the `Attack Class` is in existence, it should be fairly easy to implement a variety of attacks, dealing different damage
   * Guard conditions need to be put in place and tested
+  
+  ## Screenshots
+  
+  ![The Home Screen](screenshots/Screenshot_HomeScreen.png?raw=true "Home Screen")
+  
+  ![The Fight Screen](screenshots/Screenshot_FightScreen.png?raw=true "Fight Screen")
+  
+  ![The Attack Message](screenshots/Screenshot_AttackMessage.png?raw=true "Attack Message")
+  
+  ![The Game Over Message](screenshots/Screenshot_GameOverMessage.png?raw=true "Game Over Message")
