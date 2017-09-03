@@ -71,4 +71,10 @@ The testsuite for this program was written using rspec and capybara. The tests a
   
   ## Screenshots
   
-  ![The Home Screen](/screenshots/screenshot_HomeScreen?raw=true "Optional Title")
+  ![The Home Screen](screenshots/Screenshot_HomeScreen.png?raw=true "Home Screen")
+  
+  ![The Fight Screen](screenshots/Screenshot_FightScreen.png?raw=true "Fight Screen")
+  
+  ![The Attack Message](screenshots/Screenshot_AttackMessage.png?raw=true "Attack Message")
+  
+  ![The Game Over Message](screenshots/Screenshot_GameOverMessage.png?raw=true "Game Over Message")
