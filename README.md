@@ -28,6 +28,8 @@ The testsuite for this program was written using rspec and capybara. The tests a
   1. To run the tests using rspec 
 
     ~ $ rspec
+    
+![The Tests](screenshots/Screenshot_RSpecTests.png?raw=true "RSpec Tests")
   
 ### Structure
 
