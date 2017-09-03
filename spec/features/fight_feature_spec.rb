@@ -16,19 +16,18 @@ feature 'Feature Testing the Fight screen' do
   end
 
   scenario 'Player names are displayed correctly on the fight screen' do
-    expect(page).to have_css('p#player1_name', :text => 'Name 1')
-    expect(page).to have_css('p#player2_name', :text => 'Name 2')
+    expect(page).to have_css('div#player_name', :text => 'Name 1')
+    expect(page).to have_css('div#player_name', :text => 'Name 2')
   end
 
   scenario 'Player HP is displayed on the fight screen' do
     visit('/fight')
-    expect(page).to have_css('p#player1_hp')
-    expect(page).to have_css('p#player2_hp')
+    expect(page).to have_css('div#player_hp', count: 2)
   end
 
   scenario 'There is an attack button on the fight page' do
     visit('/fight')
-    expect(page).to have_selector('input[type=submit][value="Attack!"]')
+    expect(page).to have_selector('input[type=submit][id="attack_button"]')
   end
 
   scenario 'When clicking the Attack button, I am progressed to the attack screen' do
